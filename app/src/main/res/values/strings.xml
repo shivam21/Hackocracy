@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Reportme</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="userid">userid</string>
+    <string name="facebook_app_id">1465292426895825</string>
+    <string name="fb_login_protocol_scheme">fb1465292426895825</string>
+    <string name="miles">miles</string>
+    <string name="fcmtoken">fcmtoken</string>
+    <string name="soundstatus">soundstatus</string>
+    <string name="iswomen">iswomen</string>
+    <string name="theft">theft</string>
+    <string name="child">child</string>
+    <string name="corrupt">corrupt</string>
+    <string name="other">other</string>
+    <string name="aboutapp">This app is made as a project for the event Heckocracy.It is made on the Theme Society and helps in crime alerts.</string>
+    <array name="categories">
+        <item>Women Harassment</item>
+        <item>Theft</item>
+        <item>Child Labour</item>
+        <item>Corruption</item>
+        <item>Other</item>
+    </array>
+</resources>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "239320859224",
+    "firebase_url": "https://reportme-67761.firebaseio.com",
+    "project_id": "reportme-67761",
+    "storage_bucket": "reportme-67761.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239320859224:android:792ad0795592d4b7",
+        "android_client_info": {
+          "package_name": "com.reportme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "239320859224-mbrhogeiiqs1ihdr8g4ujn0icv9hrmsg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDE1NKelJNsl55jBwpUj4DTyyAfX9OY05I"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

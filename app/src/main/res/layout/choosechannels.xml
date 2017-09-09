@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12sp"
+        android:gravity="center"
+        android:text="Channels"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24sp"
+            android:layout_weight="2"
+            android:text="Women Harassment" />
+
+        <CheckBox
+            android:id="@+id/womenharass"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_marginLeft="24sp"
+        android:layout_marginRight="24sp"
+        android:background="@color/lightgrey" />
+    darker_gray
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24sp"
+            android:layout_weight="2"
+            android:text="Theft" />
+
+        <CheckBox
+            android:id="@+id/theft"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_marginLeft="24sp"
+        android:layout_marginRight="24sp"
+        android:background="@color/lightgrey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24sp"
+            android:layout_weight="2"
+            android:text="Child Labour" />
+
+        <CheckBox
+            android:id="@+id/child"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_marginLeft="24sp"
+        android:layout_marginRight="24sp"
+        android:background="@color/lightgrey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24sp"
+            android:layout_weight="2"
+            android:text="Corruption" />
+
+        <CheckBox
+            android:id="@+id/corruption"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_marginLeft="24sp"
+        android:layout_marginRight="24sp"
+        android:background="@color/lightgrey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24sp"
+            android:layout_weight="2"
+            android:text="Other" />
+
+        <CheckBox
+            android:id="@+id/other"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4sp"
+        android:layout_marginLeft="24sp"
+        android:layout_marginRight="24sp"
+        android:layout_marginTop="4sp"
+        android:gravity="center"
+        android:text="Note: You will get notifications only for subscribed crimes." />
+</LinearLayout>

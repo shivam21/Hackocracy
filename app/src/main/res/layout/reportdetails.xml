@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:orientation="vertical"
+        app:title="Report Details">
+
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginBottom="4sp"
+        android:layout_marginTop="4sp"
+        android:background="@color/lightgrey" />
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:layout_margin="6sp"
+        android:gravity="center_horizontal"
+        android:text="Category"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <com.github.curioustechizen.ago.RelativeTimeTextView
+        android:id="@+id/time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/category"
+        android:layout_marginRight="12sp"
+        android:gravity="end"
+        android:textSize="8sp"
+        app:relative_time_prefix="Reported on " />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_below="@+id/time"
+        android:layout_marginBottom="4sp"
+        android:layout_marginLeft="24sp"
+        android:layout_marginRight="24sp"
+        android:layout_marginTop="4sp"
+        android:background="@color/lightgrey" />
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view2"
+        android:layout_marginLeft="12sp"
+        android:layout_marginRight="12sp"
+        android:text="Description :"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/desc"
+        android:layout_marginLeft="12sp"
+        android:layout_marginRight="12sp"
+        android:layout_marginTop="4sp"
+        android:text="loading..." />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_below="@+id/description"
+        android:layout_marginBottom="4sp"
+        android:layout_marginLeft="24sp"
+        android:layout_marginRight="24sp"
+        android:layout_marginTop="4sp"
+        android:background="@color/lightgrey" />
+
+    <TextView
+        android:id="@+id/loc2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view3"
+        android:layout_marginLeft="12sp"
+        android:text="Location :"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/loc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loc2"
+        android:layout_marginLeft="12sp"
+        android:layout_marginRight="12sp"
+        android:layout_marginTop="4sp"
+        android:text="loading..." />
+
+    <HorizontalScrollView
+        android:id="@+id/hori_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loc"
+        android:fillViewport="false"
+        android:foregroundGravity="left">
+
+
+        <LinearLayout
+            android:id="@+id/selected_photos_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:animateLayoutChanges="true"
+            android:gravity="left"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+
+            <!-- images will be added dynamicall to this layout -->
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/hori_scroll_view"
+        android:layout_marginTop="12sp"
+        tools:context="com.reportme.ui.MapsActivity" />
+
+    <ProgressBar
+        android:id="@+id/pogressbar"
+        android:layout_width="80sp"
+        android:layout_height="80sp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>
