@@ -1,11 +1,14 @@
 package com.reportme.ui;
 
+import android.app.Dialog;
+import android.content.Context;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -18,6 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -50,6 +54,7 @@ import java.util.Map;
  */
 
 public class ReportDetails extends AppCompatActivity implements OnMapReadyCallback {
+    private static final String TAG = "REPORTDETAILS2";
     private String reportid;
     private TextView reportlocation;
     private ViewGroup mSelectedImagesContainer;
@@ -89,6 +94,7 @@ public class ReportDetails extends AppCompatActivity implements OnMapReadyCallba
             @Override
             public void onResponse(String response) {
                 try {
+                    Log.d(TAG, "onResponse: " + response);
                     progressBar.setVisibility(View.GONE);
                     JSONArray array = new JSONArray(response);
                     JSONObject reportdata = array.getJSONObject(0);
@@ -138,11 +144,29 @@ public class ReportDetails extends AppCompatActivity implements OnMapReadyCallba
                         JSONObject obj = reportpics.getJSONObject(i);
                         String picid = obj.getString("picname");
                         View imageHolder = LayoutInflater.from(ReportDetails.this).inflate(R.layout.photo_item, null);
-                        ImageView thumbnail = (ImageView) imageHolder.findViewById(R.id.media_image);
-                        Glide.with(ReportDetails.this)
-                                .load(String.format("%s%s%s.jpg", Url.mydomain, Url.imagepath, picid))
-                                .into(thumbnail);
-
+                        final ImageView thumbnail = (ImageView) imageHolder.findViewById(R.id.media_image);
+                        final String imageurl = String.format("%s%s%s.jpg", Url.mydomain, Url.imagepath, picid);
+                        thumbnail.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Context context = ReportDetails.this;
+                                View v = LayoutInflater.from(context).inflate(R.layout.imagedialog, null);
+                                ImageView profile = v.findViewById(R.id.imageview);
+                                Dialog dialog = new Dialog(context, R.style.MyDialogTheme);
+                                Glide.with(ReportDetails.this)
+                                        .load(imageurl)
+                                        .into(profile);
+                                dialog.setContentView(v);
+                                dialog.show();
+                            }
+                        });
+                        try {
+                            Glide.with(ReportDetails.this)
+                                    .load(imageurl)
+                                    .into(thumbnail);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                         mSelectedImagesContainer.addView(imageHolder);
 
                         thumbnail.setLayoutParams(new FrameLayout.LayoutParams(wdpx, htpx));
@@ -167,6 +191,10 @@ public class ReportDetails extends AppCompatActivity implements OnMapReadyCallba
                 return map;
             }
         };
+        request.setRetryPolicy(new DefaultRetryPolicy(
+                20000,
+                0,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         progressBar.setVisibility(View.VISIBLE);
         Volley.newRequestQueue(this).add(request);
     }

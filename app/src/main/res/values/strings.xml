@@ -2,8 +2,8 @@
     <string name="app_name">Reportme</string>
     <string name="title_activity_maps">Map</string>
     <string name="userid">userid</string>
-    <string name="facebook_app_id">1465292426895825</string>
-    <string name="fb_login_protocol_scheme">fb1465292426895825</string>
+    <string name="facebook_app_id">501480173531028</string>
+    <string name="fb_login_protocol_scheme">fb501480173531028</string>
     <string name="miles">miles</string>
     <string name="fcmtoken">fcmtoken</string>
     <string name="soundstatus">soundstatus</string>
