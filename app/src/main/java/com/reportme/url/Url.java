@@ -5,7 +5,7 @@ package com.reportme.url;
  */
 
 public class Url {
-    public static String mydomain = "http://roastme.xyz/heckocracy/";
+    public static String mydomain = "https://heckocracy.000webhostapp.com/";
     public static String signup = "signup";
     public static String getReportedplaces = "getreportedplaces";
     public static String report = "report";
