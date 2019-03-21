@@ -1,5 +1,5 @@
-# Reportme . 
-Solution to all problems . 
+# Reportme  
+Solution to all problems.   
 An Android app to report crimes like Chain Snatching, Women Harassing, Child labour, Robbery, Corruption.  
 An app which alerts the people nearby as soon as crime is reported(via notification).  
 know crime prone areas.  
@@ -18,8 +18,8 @@ Concerned authorities can directly look into crime rate in their areas.
 Concerned authorities will become active and will try to solve the problem.  
   
 FEATURES:-  
-TRACK A CRIME . 
-RECORD A CRIME . 
-REPORT A CRIME . 
-STOP A CRIME . 
+TRACK A CRIME  
+RECORD A CRIME  
+REPORT A CRIME  
+STOP A CRIME  
 ALERT PEOPLE NEARBY   
