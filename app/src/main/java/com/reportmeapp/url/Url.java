@@ -15,3 +15,4 @@ public class Url {
     public static String imagepath = "images/";
     public static String statistics = "statistics";
 }
+
