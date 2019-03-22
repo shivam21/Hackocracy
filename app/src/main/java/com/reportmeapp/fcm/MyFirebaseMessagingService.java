@@ -27,7 +27,7 @@ import java.util.Random;
  */
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
-    private static final String CHANNEL_ID = "1";
+    private static final String CHANNEL_ID = "mychannel_1";
     String TAG = "MESSAGERECEIVED";
     private GoogleApiClient mGoogleApiClient;
     private String myid;
