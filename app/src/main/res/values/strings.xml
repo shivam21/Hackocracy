@@ -12,7 +12,7 @@
     <string name="child">child</string>
     <string name="corrupt">corrupt</string>
     <string name="other">other</string>
-    <string name="aboutapp">This app is made as a project for the event Heckocracy.It is made on the Theme Society and helps in crime alerts.</string>
+    <string name="aboutapp">This app is made on the Theme Society and helps in crime alerts.</string>
     <array name="categories">
         <item>Women Harassment</item>
         <item>Theft</item>
