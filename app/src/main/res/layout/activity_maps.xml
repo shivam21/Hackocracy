@@ -7,7 +7,7 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="50sp"
+        android:layout_height="wrap_content"
         android:background="@color/lightgrey">
 
         <TextView
@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="50sp"
-        tools:context="com.reportme.ui.MapsActivity" />
+        tools:context="com.reportmeapp.ui.MapsActivity" />
 
 
     <android.support.design.widget.FloatingActionButton

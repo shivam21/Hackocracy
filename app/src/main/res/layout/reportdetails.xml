@@ -142,7 +142,7 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/hori_scroll_view"
         android:layout_marginTop="12sp"
-        tools:context="com.reportme.ui.MapsActivity" />
+        tools:context="com.reportmeapp.ui.MapsActivity" />
 
     <ProgressBar
         android:id="@+id/pogressbar"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.reportme">
+    package="com.reportmeapp">
 
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -8,7 +8,6 @@
          location permissions for the 'MyLocation' functionality. 
     -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature
@@ -17,9 +16,10 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
     <application
-        android:name=".ApplicationContext"
+        android:name="com.reportmeapp.ApplicationContext"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
@@ -60,7 +60,7 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.Splash">
+        <activity android:name="com.reportmeapp.ui.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -68,31 +68,26 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.MapsActivity"
+            android:name="com.reportmeapp.ui.MapsActivity"
             android:label="@string/title_activity_maps">
 
         </activity>
-        <activity android:name=".ui.Signunppage" />
-        <activity android:name=".ui.ReportDetails" />
-        <activity android:name=".ui.MySettings" />
+        <activity android:name="com.reportmeapp.ui.Signunppage" />
+        <activity android:name="com.reportmeapp.ui.ReportDetails" />
+        <activity android:name="com.reportmeapp.ui.MySettings" />
         <activity
             android:name="com.gun0912.tedpicker.ImagePickerActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme2" />
 
-        <service android:name=".fcm.MyFirebaseMessagingService">
+        <service android:name="com.reportmeapp.fcm.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name=".fcm.MyFirebaseInstanceIDService">
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-            </intent-filter>
-        </service>
 
-        <activity android:name=".ui.Statistics" />
-        <activity android:name=".ui.Report" />
+        <activity android:name="com.reportmeapp.ui.Statistics" />
+        <activity android:name="com.reportmeapp.ui.Report" />
     </application>
 
 </manifest>
